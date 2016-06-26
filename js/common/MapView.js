@@ -36,10 +36,7 @@ class MapView extends React.Component {
   _isMounted: boolean;
   props: {
     map: ?Map;
-    style?: any;
-  };
-  state: {
-    loaded: boolean;
+    style: any;
   };
 
   constructor() {

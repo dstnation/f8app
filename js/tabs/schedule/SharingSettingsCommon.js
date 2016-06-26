@@ -42,7 +42,7 @@ class SharingSettingsCommon extends React.Component {
 
   render() {
     const {user} = this.props;
-    const title = user.name && user.id && (
+    const title = user.name && (
       <View style={styles.title}>
         <ProfilePicture userID={user.id} size={24} />
         <Text style={styles.name}>

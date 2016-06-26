@@ -56,9 +56,10 @@ class ThirdPartyNotices extends React.Component {
 }
 
 class Loading extends React.Component {
-  state = {
-    loaded: false,
-  };
+  constructor() {
+    super();
+    this.state = { loaded: false };
+  }
 
   componentDidMount() {
     InteractionManager.runAfterInteractions(() => this.setState({loaded: true}));

@@ -24,12 +24,12 @@
 
 'use strict';
 
-var React = require('react');
+var React = require('react-native');
 var {
   StyleSheet,
   View,
   TouchableOpacity,
-} = require('react-native');
+} = React;
 var { Text } = require('F8Text');
 
 class TopicItem extends React.Component {

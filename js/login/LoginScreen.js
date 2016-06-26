@@ -39,9 +39,12 @@ var { skipLogin } = require('../actions');
 var { connect } = require('react-redux');
 
 class LoginScreen extends React.Component {
-  state = {
-    anim: new Animated.Value(0),
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      anim: new Animated.Value(0),
+    };
+  }
 
   componentDidMount() {
     StatusBar && StatusBar.setBarStyle('default');

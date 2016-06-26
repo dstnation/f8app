@@ -33,6 +33,7 @@ var { Heading1, Paragraph } = require('F8Text');
 
 class PushNUXModal extends React.Component {
   props: {
+    style: any;
     onTurnOnNotifications: () => void;
     onSkipNotifications: () => void;
   };

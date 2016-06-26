@@ -51,7 +51,7 @@ RCT_EXPORT_METHOD(pin:(nonnull NSNumber *)scrollViewReactTag
     RCTScrollView *reactScrollView = (RCTScrollView *)scrollView;
     [_pinnedViews setObject:pinnedView forKey:reactScrollView.scrollView];
     [_distances setObject:distance forKey:reactScrollView.scrollView];
-    [reactScrollView addScrollListener:self];
+    [reactScrollView setNativeScrollDelegate:self];
     [self scrollViewDidScroll:reactScrollView.scrollView];
   }
 }
@@ -63,7 +63,7 @@ RCT_EXPORT_METHOD(unpin:(nonnull NSNumber *)scrollViewReactTag)
     RCTScrollView *reactScrollView = (RCTScrollView *)scrollView;
     [_pinnedViews removeObjectForKey:reactScrollView.scrollView];
     [_distances removeObjectForKey:reactScrollView.scrollView];
-    [reactScrollView removeScrollListener:self];
+    [reactScrollView setNativeScrollDelegate:nil];
   }
 }
 

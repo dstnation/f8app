@@ -23,7 +23,7 @@
  */
 'use strict';
 
-const React = require('react');
+const React = require('react-native');
 const ViewPager = require('./ViewPager');
 const StyleSheet = require('F8StyleSheet');
 

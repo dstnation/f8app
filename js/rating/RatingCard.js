@@ -23,11 +23,11 @@
  */
 'use strict';
 
-const React = require('react');
+const React = require('react-native');
 const {
   View,
   ScrollView,
-} = require('react-native');
+} = React;
 const StyleSheet = require('F8StyleSheet');
 const Header = require('./Header');
 const RatingQuestion = require('./RatingQuestion');

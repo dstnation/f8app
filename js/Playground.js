@@ -28,10 +28,6 @@ var React = require('React');
 var View = require('View');
 
 class Playground extends React.Component {
-  state: {
-    content: Array<ReactElement>;
-  };
-
   constructor() {
     super();
     const content = [];
@@ -42,7 +38,6 @@ class Playground extends React.Component {
     var Module = require('F8Header');
     // var Module = require('./tabs/schedule/AddToScheduleButton');
     // var Module = require('./rating/Header');
-    // $FlowFixMe: doesn't understand static
     Module.__cards__(define);
     this.state = {content};
   }
@@ -57,9 +52,10 @@ class Playground extends React.Component {
 }
 
 class Example extends React.Component {
-  state = {
-    inner: null
-  };
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
 
   render() {
     const content = this.props.render(this.state.inner, (inner) => this.setState({inner}));

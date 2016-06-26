@@ -33,7 +33,6 @@ var View = require('View');
 var Image = require('Image');
 var Dimensions = require('Dimensions');
 
-// TODO: Remove this magic numbers
 const HEIGHT = Dimensions.get('window').height > 600
   ? 200
   : 150;
@@ -45,19 +44,12 @@ type Props = {
   offset: Animated.Value;
   backgroundImage: number;
   backgroundShift: number; // 0..1
-  backgroundColor: string; // TODO: This makes it seems like image loads faster. Remove
-  children?: any;
+  backgroundColor: number; // TODO: This makes it seems like image loads faster. Remove
+  children: any;
 }
-
-type State = {
-  shift: Animated.Value;
-};
 
 class ParallaxBackground extends React.Component {
   props: Props;
-  state: State;
-
-  static HEIGHT = HEIGHT;
 
   constructor(props: Props) {
     super(props);
@@ -157,6 +149,9 @@ class ParallaxBackground extends React.Component {
     );
   }
 }
+
+// TODO: Remove this magic numbers
+ParallaxBackground.HEIGHT = HEIGHT;
 
 var HEADER_HEIGHT = HEIGHT + 156;
 

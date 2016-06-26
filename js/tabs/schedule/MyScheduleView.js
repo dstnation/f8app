@@ -70,9 +70,9 @@ class MyScheduleView extends React.Component {
   constructor(props) {
     super(props);
 
-    (this: any).renderEmptySessionsList = this.renderEmptySessionsList.bind(this);
-    (this: any).openSharingSettings = this.openSharingSettings.bind(this);
-    (this: any).handleSegmentChanged = this.handleSegmentChanged.bind(this);
+    this.renderEmptySessionsList = this.renderEmptySessionsList.bind(this);
+    this.openSharingSettings = this.openSharingSettings.bind(this);
+    this.handleSegmentChanged = this.handleSegmentChanged.bind(this);
   }
 
   render() {
@@ -85,10 +85,8 @@ class MyScheduleView extends React.Component {
       };
     }
 
-    const {id, isLoggedIn} = this.props.user;
-    const profilePicture = isLoggedIn && id
-      ? <ProfilePicture userID={id} size={100} />
-      : null;
+    const profilePicture = this.props.user.isLoggedIn &&
+      <ProfilePicture userID={this.props.user.id} size={100} />;
 
     return (
       <ListContainer
@@ -201,3 +199,4 @@ function actions(dispatch) {
 }
 
 module.exports = connect(select, actions)(MyScheduleView);
+window.RRR = require('ReactDefaultPerf');

@@ -35,7 +35,7 @@ var configureStore = require('./store/configureStore');
 
 var {serverURL} = require('./env');
 
-function setup(): ReactClass<{}> {
+function setup(): React.Component {
   console.disableYellowBox = true;
   Parse.initialize('oss-f8-app-2016');
   Parse.serverURL = `${serverURL}/parse`;
@@ -50,11 +50,6 @@ function setup(): ReactClass<{}> {
   );
 
   class Root extends React.Component {
-    state: {
-      isLoading: boolean;
-      store: any;
-    };
-
     constructor() {
       super();
       this.state = {

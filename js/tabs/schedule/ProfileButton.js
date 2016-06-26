@@ -23,11 +23,11 @@
  */
 'use strict';
 
-const React = require('react');
+const React = require('react-native');
 const {
   Image,
   StyleSheet,
-} = require('react-native');
+} = React;
 
 
 class ProfileButton extends React.Component {

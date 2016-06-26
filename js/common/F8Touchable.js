@@ -25,8 +25,7 @@
 
 'use strict';
 
-import React from 'react';
-import {
+import React, {
   TouchableHighlight,
   TouchableNativeFeedback,
   Platform,

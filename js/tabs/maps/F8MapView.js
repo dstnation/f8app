@@ -42,13 +42,14 @@ class F8MapView extends React.Component {
   constructor() {
     super();
 
-    (this: any).handleGetDirections = this.handleGetDirections.bind(this);
-    (this: any).openMaps = this.openMaps.bind(this);
+    this.handleGetDirections = this.handleGetDirections.bind(this);
+    this.openMaps = this.openMaps.bind(this);
   }
 
   render() {
     const {map1, map2} = this.props;
 
+	    
     return (
       <View style={styles.container}>
         <ListContainer
@@ -56,11 +57,11 @@ class F8MapView extends React.Component {
           backgroundImage={require('./img/maps-background.png')}
           backgroundColor={'#9176D2'}>
           <PureListView
-            title="Overview"
+            title='Overview'
             renderEmptyList={() => <MapView map={map1} />}
           />
           <PureListView
-            title="Developer Garage"
+            title='Developer Garage'
             renderEmptyList={() => <MapView map={map2} />}
           />
         </ListContainer>

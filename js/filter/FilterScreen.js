@@ -23,7 +23,7 @@
  */
 'use strict';
 
-const React = require('react');
+const React = require('react-native');
 const F8Header = require('F8Header');
 const F8Colors = require('F8Colors');
 const TopicItem = require('./TopicItem');
@@ -35,7 +35,7 @@ const {
   View,
   StyleSheet,
   ScrollView,
-} = require('react-native');
+} = React;
 
 const shallowEqual = require('fbjs/lib/shallowEqual');
 const {

@@ -24,7 +24,7 @@
 'use strict';
 
 var F8Colors = require('F8Colors');
-import LinearGradient from 'react-native-linear-gradient';
+var LinearGradient = require('react-native-linear-gradient');
 var React = require('React');
 var StyleSheet = require('StyleSheet');
 var { Text } = require('F8Text');

@@ -50,17 +50,16 @@ export type Item = {
 };
 
 export type Props = {
-  title?: string;
+  title: string;
   leftItem?: Item;
   rightItem?: Item;
   extraItems?: Array<Item>;
   foreground?: Foreground;
-  style?: any;
-  children?: any;
+  style: any;
+  children: any;
 };
 
 class F8HeaderAndroid extends React.Component {
-  static height: number;
   props: Props;
 
   render() {
@@ -123,7 +122,6 @@ class F8HeaderAndroid extends React.Component {
 
 
 class F8HeaderIOS extends React.Component {
-  static height: number;
   props: Props;
 
   render() {
@@ -242,8 +240,9 @@ var styles = StyleSheet.create({
 
 const Header = Platform.OS === 'ios' ? F8HeaderIOS : F8HeaderAndroid;
 Header.height = HEADER_HEIGHT;
-// $FlowFixMe
-Header.__cards__ = (define) => {
+
+module.exports = Header;
+module.exports.__cards__ = (define) => {
   const menuItem = {
     title: 'Menu',
     icon: require('./img/hamburger.png'),
@@ -304,5 +303,3 @@ Header.__cards__ = (define) => {
     />
   ));
 };
-
-module.exports = Header;

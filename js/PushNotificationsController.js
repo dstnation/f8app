@@ -24,7 +24,7 @@
 
 'use strict';
 
-var React = require('react');
+var React = require('react-native');
 var AppState = require('AppState');
 var Platform = require('Platform');
 var unseenNotificationsCount = require('./tabs/notifications/unseenNotificationsCount');
